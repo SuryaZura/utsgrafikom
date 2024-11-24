@@ -5,7 +5,7 @@ import android.opengl.GLSurfaceView;
 
 public class MyGLSurfaceView extends GLSurfaceView {
 
-    private final MyGLRenderer Renderer;
+    private final MyGLRenderer renderer;
 
     public MyGLSurfaceView(Context context) {
         super(context);
@@ -14,10 +14,10 @@ public class MyGLSurfaceView extends GLSurfaceView {
         setEGLContextClientVersion(2);
 
         // Create a new Renderer instance
-        Renderer = new MyGLRenderer();
+        renderer = new MyGLRenderer();
 
         // Set the Renderer for drawing on the GLSurfaceView
-        setRenderer(Renderer);
+        setRenderer(renderer);
 
         // Render the view only when there is a change in the drawing data
         setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
